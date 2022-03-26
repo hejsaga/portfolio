@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "projects",
+  "collectionName": "cases",
   "info": {
-    "singularName": "project",
-    "pluralName": "projects",
-    "displayName": "project",
-    "description": ""
+    "singularName": "case",
+    "pluralName": "cases",
+    "displayName": "case"
   },
   "options": {
     "draftAndPublish": true
@@ -21,9 +20,6 @@
     "body": {
       "type": "richtext"
     },
-    "number": {
-      "type": "integer"
-    },
     "image": {
       "allowedTypes": [
         "images",
@@ -38,7 +34,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::technology.technology",
-      "inversedBy": "projects"
+      "inversedBy": "cases"
     }
   }
 }
