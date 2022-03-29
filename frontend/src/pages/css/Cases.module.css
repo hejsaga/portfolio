@@ -1,0 +1,124 @@
+/* justifying the even project containers to the right */
+.caseWrapper > div:nth-child(even) {
+  text-align: right;
+  margin-right: 4em;
+  justify-content: end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-end;
+  -webkit-align-items: flex-end;
+}
+
+/* justifying tags and roles to the right on the even children */
+.projectContainer:nth-child(2)
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > div:nth-child(1),
+.projectContainer:nth-child(2)
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > div:nth-child(5) {
+  justify-content: end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-end;
+  -webkit-align-items: flex-end;
+}
+
+.projectContainer:nth-child(2) > div:nth-child(2) {
+  left: 20%;
+}
+
+.projectContainer {
+  color: white;
+  display: flex;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  position: relative;
+}
+
+/* .image {
+  height: 400px;
+  width: 500px;
+  background-color: pink;
+  position: absolute;
+  top: -10px;
+  right: 20%;
+  z-index: -1;
+} */
+
+.descriptionContainer {
+  padding: 1.5em;
+  border-radius: 8px;
+  background-color: rgb(24, 25, 48);
+  width: 60%;
+}
+
+.textContainer p {
+  color: rgb(159, 159, 181);
+}
+
+.tags,
+.roles {
+  display: flex;
+  margin: 0.2em 0em;
+}
+
+.tags p,
+.roles p {
+  font-size: 15px;
+  padding-right: 0.5em;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(78, 209, 232);
+}
+
+.roles p {
+  margin: 1.5em 0em 2em 0em;
+}
+
+.projectContainer h2,
+h3 {
+  font-family: sans-serif;
+}
+
+.projectListContainer {
+  margin: 0em 0em 3.5em 1em;
+}
+
+.projectItem {
+  display: flex;
+  align-items: center;
+  margin-top: 0.8em;
+  padding: 1em;
+  width: 400px;
+  text-decoration: none;
+}
+
+.projectItemId {
+  font-size: 25px;
+  padding-right: 0.5em;
+  font-family: "Roboto Mono", monospace;
+  color: rgb(78, 209, 232);
+}
+
+.projectItemTitle {
+  font-family: "Roboto Mono", monospace;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 1800px) {
+  .projectContainer {
+    margin-top: 8em;
+    margin-bottom: 11em;
+  }
+
+  .descriptionContainer {
+    width: 55%;
+  }
+
+  .projectContainer h2 {
+    font-size: 2.2em;
+  }
+
+  .projectContainer h3 {
+    font-size: 1.4em;
+  }
+}

@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(21, 22, 43);
+}
+
+.headline {
+  padding-top: 2em;
+  padding-bottom: 8em;
+  position: relative;
+}
+
+.headline h1 {
+  color: rgb(51, 51, 75);
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 6em;
+}
+
+.headline h2 {
+  color: rgb(16, 16, 40);
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 9em;
+  position: absolute;
+  top: 50px;
+  z-index: -1;
+  left: 50px;
+}
+
+p {
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.App {
+  position: relative;
+}
+
+.pagewrapper {
+  margin-left: 13em;
+}
+
+.Typewriter {
+  margin-top: 7em;
+}
+
+.Typewriter__wrapper {
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  color: rgb(159, 159, 181);
+}
+
+.Typewriter__cursor {
+  color: rgb(159, 159, 181);
+  font-size: 20px;
+  margin-left: 4px;
+}
+
+.about,
+.contact,
+.projects {
+  min-height: 100vh;
+}
+
+.footer p {
+  font-size: x-small;
+  color: gray;
+  padding-bottom: 2em;
+  padding-right: 2em;
+  text-align: right;
+}
+
+.footer a {
+  color: rgb(78, 209, 232);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1800px) {
+  .headline h1 {
+    margin: 0;
+    font-size: 7em;
+  }
+
+  .headline h2 {
+    margin: 0;
+    font-size: 11em;
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+    left: 50px;
+  }
+}

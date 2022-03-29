@@ -1,0 +1,43 @@
+.scrollDownContainer {
+  width: 60px;
+  height: 150px;
+  position: relative;
+}
+
+.arrow {
+  font-size: 1.6em;
+  position: absolute;
+  top: 85px;
+}
+
+.arrow,
+.scrollDownText p {
+  color: rgb(78, 209, 232);
+}
+
+.scrollDownText {
+  font-size: small;
+  position: absolute;
+  top: 30px;
+  left: -21px;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  animation: heart-pulse 1.4s infinite ease-out;
+}
+
+.scrollDownText p {
+  transform: rotate(-90deg);
+}
+
+@keyframes heart-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
