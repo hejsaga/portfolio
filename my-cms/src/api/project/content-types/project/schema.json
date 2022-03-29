@@ -39,6 +39,12 @@
       "relation": "manyToMany",
       "target": "api::technology.technology",
       "inversedBy": "projects"
+    },
+    "positions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::position.position",
+      "inversedBy": "projects"
     }
   }
 }

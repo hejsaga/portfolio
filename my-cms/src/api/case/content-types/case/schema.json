@@ -35,6 +35,12 @@
       "relation": "manyToMany",
       "target": "api::technology.technology",
       "inversedBy": "cases"
+    },
+    "positions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::position.position",
+      "inversedBy": "cases"
     }
   }
 }
