@@ -8,7 +8,7 @@ const useCaseContext = () => {
   return useContext(CaseContext);
 };
 
-/* const CASES = gql(`
+const CASES = gql(`
 query GetCases {
   cases {
     data {
@@ -17,7 +17,7 @@ query GetCases {
         title
         description
         body
-        images {
+        image {
           data {
             attributes {
               url
@@ -31,7 +31,7 @@ query GetCases {
             }
           }
         }
-        tags {
+        technologies {
           data {
             attributes {
               title
@@ -42,17 +42,17 @@ query GetCases {
     }
   }
 }
-`); */
+`);
 
 const CaseContextProvider = ({ children }) => {
-  /* const { data } = useQuery(CASES); */
+  const { data } = useQuery(CASES);
   const [cases, setCases] = useState();
 
-  /*  useEffect(() => {
+  useEffect(() => {
     if (data) {
       setCases(transformCaseData(data));
     }
-  }, [data]); */
+  }, [data]);
 
   const contextValues = { cases };
 

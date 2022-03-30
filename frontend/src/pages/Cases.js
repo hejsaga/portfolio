@@ -20,7 +20,7 @@ const Cases = () => {
                 <div className={styles.descriptionContainer}>
                   <div className={styles.textContainer}>
                     <div className={styles.tags}>
-                      {item.tags.map((tag, i) => {
+                      {item.technologies.map((tag, i) => {
                         return <p key={i}>#{tag}</p>;
                       })}
                     </div>
@@ -36,8 +36,6 @@ const Cases = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* <div className={styles.image}></div> */}
               </div>
             );
           })}
