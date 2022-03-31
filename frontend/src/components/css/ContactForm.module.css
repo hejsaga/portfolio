@@ -28,6 +28,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.button:hover {
+  color: white;
+  cursor: pointer;
+}
+
 .message {
   margin-top: 1em;
 }
