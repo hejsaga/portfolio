@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { useProjectContext } from "../contexts/ProjectContext";
-import styles from "./css/Projects.module.css";
 import { useNavigate } from "react-router-dom";
+import styles from "./css/Projects.module.css";
 
 const Projects = () => {
   const navigate = useNavigate();
   const { projects } = useProjectContext();
   const [hoveredProject, setHoveredProject] = useState();
-  const imagePrefix = "https://saga-swahn.herokuapp.com";
   const currentURL = window.location.href;
 
   const goToProject = (id) => {
@@ -59,8 +58,8 @@ const Projects = () => {
                       {project.image && (
                         <img
                           key={i}
-                          src={imagePrefix + project.image}
-                          alt="project-image"
+                          src={project.image}
+                          alt="project-icon"
                         ></img>
                       )}
                     </div>
