@@ -9,7 +9,6 @@ const ProjectPage = () => {
   const { projects } = useProjectContext();
   let { id } = useParams();
   const [project, setProject] = useState();
-  const imagePrefix = "http://localhost:1337";
 
   const getProject = () => {
     if (projects) {
@@ -57,10 +56,7 @@ const ProjectPage = () => {
                 </div>
 
                 <div className={styles.imageContainer}>
-                  <img
-                    src={imagePrefix + project[0].image}
-                    alt="project-image"
-                  ></img>
+                  <img src={project[0].image} alt="project-image"></img>
                 </div>
               </div>
             </div>
