@@ -8,6 +8,7 @@
   font-size: 1.6em;
   position: absolute;
   top: 85px;
+  right: 0;
 }
 
 .arrow,
@@ -15,19 +16,19 @@
   color: rgb(78, 209, 232);
 }
 
+.scrollDownText p {
+  transform: rotate(-90deg);
+}
+
 .scrollDownText {
   font-size: small;
   position: absolute;
   top: 30px;
-  left: -21px;
+  right: -18px;
   display: inline-flex;
   padding: 0;
   margin: 0;
   animation: heart-pulse 1.4s infinite ease-out;
-}
-
-.scrollDownText p {
-  transform: rotate(-90deg);
 }
 
 @keyframes heart-pulse {
@@ -39,5 +40,15 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .scrollDownText {
+    left: -21px;
+  }
+
+  .arrow {
+    right: unset;
   }
 }

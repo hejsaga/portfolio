@@ -1,4 +1,3 @@
-import { useProjectContext } from "../contexts/ProjectContext";
 import { useNavigate } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import ScrollDown from "../components/ScrollDown";
@@ -10,7 +9,6 @@ import About from "./About";
 import Footer from "../components/Footer";
 
 const Home = () => {
-  const { projects } = useProjectContext();
   const navigate = useNavigate();
 
   const goToContactPage = () => {
@@ -29,7 +27,7 @@ const Home = () => {
             options={{
               strings: [
                 "<span>A frontend developer.</span>",
-                "<span>A world wide web designer.</span>",
+                "<span>A world wide web creator.</span>",
                 "<span>The one who, um... creates what you see and interact with on the internet.</span>",
               ],
               autoStart: true,
