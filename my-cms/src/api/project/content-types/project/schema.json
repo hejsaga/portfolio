@@ -21,18 +21,16 @@
     "body": {
       "type": "richtext"
     },
-    "number": {
-      "type": "integer"
-    },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "technologies": {
       "type": "relation",
@@ -45,6 +43,9 @@
       "relation": "manyToMany",
       "target": "api::position.position",
       "inversedBy": "projects"
+    },
+    "number": {
+      "type": "string"
     }
   }
 }

@@ -24,7 +24,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::project.project",
-      "inversedBy": "technologies"
+      "mappedBy": "technologies"
     }
   }
 }
