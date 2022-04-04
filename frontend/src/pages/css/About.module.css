@@ -1,5 +1,5 @@
 .textContainer {
-  width: 50%;
+  width: 100%;
 }
 
 .textContainer h3 {
@@ -9,4 +9,10 @@
 .textContainer p {
   color: rgb(159, 159, 181);
   margin-top: 1em;
+}
+
+@media screen and (min-width: 1400px) {
+  .textContainer {
+    width: 50%;
+  }
 }

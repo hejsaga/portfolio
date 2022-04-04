@@ -27,11 +27,21 @@ const MobileNavbar = () => {
         <>
           <div className={styles.menu}>
             <div className={styles.links}>
-              <Link to="/">Home</Link>
-              <Link to="/cases">Live cases</Link>
-              <Link to="/projects">Projects</Link>
-              <Link to="/about">About</Link>
-              <Link to="/contact">Contact</Link>
+              <Link to="/" onClick={() => setShowMenu(false)}>
+                Home
+              </Link>
+              <Link to="/cases" onClick={() => setShowMenu(false)}>
+                Live cases
+              </Link>
+              <Link to="/projects" onClick={() => setShowMenu(false)}>
+                Projects
+              </Link>
+              <Link to="/about" onClick={() => setShowMenu(false)}>
+                About
+              </Link>
+              <Link to="/contact" onClick={() => setShowMenu(false)}>
+                Contact
+              </Link>
             </div>
 
             <div className={styles.icons}>

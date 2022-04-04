@@ -3,35 +3,42 @@
   display: flex;
   justify-content: center;
   margin-top: 3em;
-  margin-bottom: 8em;
+  margin-bottom: 5em;
 }
 
 .descriptionContainer {
   position: relative;
-  padding: 1.5em;
+  padding: 1em;
+  padding-top: 4em;
   border-radius: 8px;
   background-color: rgb(24, 25, 48);
-  width: 70%;
+  max-width: 90%;
 }
 
 .imageContainer img {
-  height: 130px;
+  height: 80px;
   filter: invert(1);
   opacity: 0.7;
   position: absolute;
   z-index: 2;
-  left: -50px;
-  top: -50px;
+  left: -10px;
+  top: -30px;
 }
 
 .textContainer {
-  margin-left: 10em;
+  margin-left: 1em;
 }
 
 .tags,
 .roles {
   display: flex;
   margin: 0.2em 0em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.roles {
+  padding-bottom: 1em;
 }
 
 .tags p,
@@ -40,10 +47,11 @@
   padding-right: 0.5em;
   font-family: "Roboto Mono", monospace;
   color: rgb(78, 209, 232);
+  font-size: smaller;
 }
 
-.roles p {
-  margin: 1.5em 0em 2em 0em;
+.body {
+  margin-bottom: 1em;
 }
 
 .projectContainer h2,
@@ -56,7 +64,7 @@ h3 {
 }
 
 .projectListContainer {
-  margin: 0em 0em 3.5em 1em;
+  margin-bottom: 4em;
 }
 
 .projectItem {
@@ -65,7 +73,6 @@ h3 {
   background-color: rgb(24, 25, 48);
   margin-top: 0.8em;
   padding: 1em;
-  width: 400px;
   text-decoration: none;
 }
 
@@ -79,6 +86,52 @@ h3 {
 .projectItemTitle {
   font-family: "Roboto Mono", monospace;
   font-size: 13px;
+}
+
+@media screen and (min-width: 1400px) {
+  .projectContainer {
+    margin-top: 3em;
+    margin-bottom: 8em;
+  }
+
+  .textContainer {
+    margin-left: 10em;
+  }
+
+  .imageContainer img {
+    height: 130px;
+    filter: invert(1);
+    opacity: 0.7;
+    position: absolute;
+    z-index: 2;
+    left: -50px;
+    top: -50px;
+  }
+
+  .descriptionContainer {
+    padding: 1.5em;
+    width: 70%;
+  }
+
+  .roles p {
+    margin: 1.5em 0em 2em 0em;
+  }
+
+  .body {
+    margin-bottom: 0;
+  }
+
+  .projectListContainer {
+    margin: 0em 0em 3.5em 1em;
+  }
+
+  .projectItem {
+    width: 400px;
+  }
+
+  .projectContainer {
+    margin-bottom: 8em;
+  }
 }
 
 @media screen and (min-width: 1800px) {

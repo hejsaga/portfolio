@@ -29,7 +29,7 @@ function App() {
             <div className="App">
               {useMobileStyling ? <MobileNavbar /> : <Navbar />}
 
-              <div className={useMobileStyling ? "" : "pagewrapper"}>
+              <div className={useMobileStyling ? "pagemargin" : "pagewrapper"}>
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/contact" element={<Contact />} />

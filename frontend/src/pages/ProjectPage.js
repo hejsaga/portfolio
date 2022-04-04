@@ -4,11 +4,13 @@ import { useProjectContext } from "../contexts/ProjectContext";
 import styles from "./css/ProjectPage.module.css";
 import { Link } from "react-router-dom";
 import ScrollDown from "../components/ScrollDown";
+import UseStyling from "../services/useStyling";
 
 const ProjectPage = () => {
   const { projects } = useProjectContext();
   let { id } = useParams();
   const [project, setProject] = useState();
+  const useMobileStyling = UseStyling();
 
   const getProject = () => {
     if (projects) {
@@ -31,7 +33,9 @@ const ProjectPage = () => {
     <>
       <div className="headline">
         <h1>project .0{id}</h1>
-        <h2>project .0{id}</h2>
+        <h2>
+          {useMobileStyling ? "proj" : "project"} .0{id}
+        </h2>
       </div>
 
       {project && (
@@ -47,7 +51,7 @@ const ProjectPage = () => {
 
                 <h2>{project[0].title}</h2>
                 <h3>{project[0].description}</h3>
-                <p>{project[0].body}</p>
+                <p className={styles.body}>{project[0].body}</p>
 
                 <div className={styles.roles}>
                   {project[0].roles.map((role, i) => {
@@ -61,12 +65,12 @@ const ProjectPage = () => {
               </div>
             </div>
 
-            <ScrollDown />
+            {useMobileStyling ? "" : <ScrollDown />}
           </div>
 
           <div className="headline">
             <h1>all projects</h1>
-            <h2>all projects</h2>
+            <h2>{useMobileStyling ? "" : "all"} projects</h2>
           </div>
 
           <div className={styles.projectListContainer}>

@@ -6,7 +6,7 @@ const Cases = () => {
   const { cases } = useCaseContext();
 
   return (
-    <div>
+    <div className="cases">
       <div className="headline">
         <h1>cases</h1>
         <h2>cases</h2>

@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { useProjectContext } from "../contexts/ProjectContext";
 import { useNavigate } from "react-router-dom";
 import styles from "./css/Projects.module.css";
+import ProjectsMobile from "./ProjectsMobile";
+import UseStyling from "../services/useStyling";
 
 const Projects = () => {
   const navigate = useNavigate();
   const { projects } = useProjectContext();
   const [hoveredProject, setHoveredProject] = useState();
   const currentURL = window.location.href;
+  const useMobileStyling = UseStyling();
 
   const goToProject = (id) => {
     if (currentURL.includes("projects")) {
@@ -44,30 +47,34 @@ const Projects = () => {
           </div>
         )}
 
-        <div className={styles.container}>
-          <div className={styles.grid}>
-            {projects &&
-              projects.map((project, i) => {
-                return (
-                  <div key={i} onClick={() => goToProject(project.id)}>
-                    <div
-                      className={styles.imageContainer}
-                      onMouseEnter={() => setHoveredProject(project)}
-                      onMouseLeave={() => setHoveredProject(null)}
-                    >
-                      {project.image && (
-                        <img
-                          key={i}
-                          src={project.image}
-                          alt="project-icon"
-                        ></img>
-                      )}
+        {useMobileStyling ? (
+          <ProjectsMobile projects={projects} goToProject={goToProject} />
+        ) : (
+          <div className={styles.container}>
+            <div className={styles.grid}>
+              {projects &&
+                projects.map((project, i) => {
+                  return (
+                    <div key={i} onClick={() => goToProject(project.id)}>
+                      <div
+                        className={styles.imageContainer}
+                        onMouseEnter={() => setHoveredProject(project)}
+                        onMouseLeave={() => setHoveredProject(null)}
+                      >
+                        {project.image && (
+                          <img
+                            key={i}
+                            src={project.image}
+                            alt="project-icon"
+                          ></img>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
