@@ -1,7 +1,8 @@
 const transformData = (data) => {
-  let projects = data.projects.data.map((project) => {
+  let attributes = data.projects.data.map((project) => {
     return {
       id: project.id,
+      number: project.attributes.number,
       title: project.attributes.title,
       description: project.attributes.description,
       body: project.attributes.body,
@@ -13,6 +14,10 @@ const transformData = (data) => {
         return pos.attributes.title;
       }),
     };
+  });
+
+  let projects = attributes.sort((a, b) => {
+    return a.number - b.number;
   });
 
   return projects;

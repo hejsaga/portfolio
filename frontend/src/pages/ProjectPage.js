@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { useProjectContext } from "../contexts/ProjectContext";
-import styles from "./css/ProjectPage.module.css";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ScrollDown from "../components/ScrollDown";
 import UseStyling from "../services/useStyling";
+import styles from "./css/ProjectPage.module.css";
 
 const ProjectPage = () => {
   const { projects } = useProjectContext();
@@ -12,7 +12,7 @@ const ProjectPage = () => {
   const [project, setProject] = useState();
   const useMobileStyling = UseStyling();
 
-  const getProject = () => {
+  const getProject = (id) => {
     if (projects) {
       setProject(
         projects.filter((project) => {
@@ -25,21 +25,21 @@ const ProjectPage = () => {
 
   useEffect(() => {
     if (id) {
-      getProject();
+      getProject(id);
     }
   }, [id, projects]);
 
   return (
     <>
-      <div className="headline">
-        <h1>project .0{id}</h1>
-        <h2>
-          {useMobileStyling ? "proj" : "project"} .0{id}
-        </h2>
-      </div>
-
       {project && (
         <>
+          <div className="headline">
+            <h1>project .0{project[0].number}</h1>
+            <h2>
+              {useMobileStyling ? "proj" : "project"} .0{project[0].number}
+            </h2>
+          </div>
+
           <div className={styles.projectContainer}>
             <div className={styles.descriptionContainer}>
               <div className={styles.textContainer}>
@@ -75,15 +75,15 @@ const ProjectPage = () => {
 
           <div className={styles.projectListContainer}>
             {projects &&
-              projects.map((listItem, i) => {
+              projects.map((listItem) => {
                 return (
                   <Link
                     to={{ pathname: `/projects/project/${listItem.id}` }}
-                    key={i}
+                    key={listItem.number}
                     className={styles.projectItem}
                     style={listItem.id === id ? { marginLeft: "2em" } : {}}
                   >
-                    <p className={styles.projectItemId}>.0{listItem.id}</p>
+                    <p className={styles.projectItemId}>.0{listItem.number}</p>
 
                     <p
                       className={styles.projectItemTitle}

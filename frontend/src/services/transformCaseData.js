@@ -1,5 +1,5 @@
 const transformData = (experiences) => {
-  let cases = experiences.cases.data.map((experience) => {
+  let attributes = experiences.cases.data.map((experience) => {
     return {
       id: experience.id,
       title: experience.attributes.title,
@@ -12,6 +12,10 @@ const transformData = (experiences) => {
         return pos.attributes.title;
       }),
     };
+  });
+
+  let cases = attributes.sort((a, b) => {
+    return a.id - b.id;
   });
 
   return cases;
