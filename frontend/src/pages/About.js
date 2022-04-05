@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import styles from "./css/About.module.css";
 import { useQuery, gql } from "@apollo/client";
+import styles from "./css/About.module.css";
 
 const ABOUT = gql(`
   query GetAbout {
@@ -23,7 +23,7 @@ const About = () => {
   useEffect(() => {
     if (data) {
       let body = data.abouts.data[0].attributes.body;
-      let title = data.abouts.data[0].attributes.description;
+      let title = data.abouts.data[0].attributes.title;
       setAbout(body);
       setTitle(title);
     }
@@ -38,7 +38,7 @@ const About = () => {
 
       <div className={styles.textContainer}>
         <h3>{title}</h3>
-        <p> {about}</p>
+        <p>{about}</p>
       </div>
     </div>
   );
