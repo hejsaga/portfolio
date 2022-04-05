@@ -10,7 +10,6 @@
   display: flex;
   justify-content: right;
   float: right;
-  padding: 0.5em;
 }
 
 .button {
@@ -31,6 +30,7 @@
   height: 100vh;
   width: 100vw;
   background-color: rgba(17, 18, 34, 0.975);
+  text-align: center;
 }
 
 .links {
@@ -43,12 +43,13 @@
 }
 
 .links a {
+  text-align: center;
   color: white;
   font-family: sans-serif;
   text-decoration: none;
   font-size: 1.8em;
   padding: 0.3em;
-  letter-spacing: 0.45em;
+  letter-spacing: 0.3em;
 }
 
 .icons {
