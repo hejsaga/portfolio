@@ -1,6 +1,5 @@
 .projectContainer {
   position: relative;
-  padding-bottom: 4em;
 }
 
 .container {
@@ -89,6 +88,12 @@
 .description {
   margin-bottom: 1em;
   font-size: 0.9em;
+}
+
+@media screen and (min-width: 1400px) {
+  .projectContainer {
+    padding-bottom: 4em;
+  }
 }
 
 @media screen and (min-width: 1800px) {

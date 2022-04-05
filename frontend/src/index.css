@@ -10,7 +10,8 @@ body {
 }
 
 .headline {
-  padding-bottom: 5em;
+  padding-top: 2em;
+  padding-bottom: 3em;
   position: relative;
 }
 
@@ -18,16 +19,16 @@ body {
   color: rgb(51, 51, 75);
   font-family: sans-serif;
   margin: 0;
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .headline h2 {
   color: rgb(16, 16, 40);
   font-family: sans-serif;
   margin: 0;
-  font-size: 5em;
+  font-size: 4em;
   position: absolute;
-  top: 20px;
+  top: 35px;
   z-index: -1;
   left: 40px;
 }
@@ -47,7 +48,7 @@ p {
 }
 
 .pagemargin {
-  margin: 1.5em;
+  margin: 1.5em 1.5em;
 }
 
 .Typewriter {
@@ -75,13 +76,24 @@ p {
 .footer p {
   font-size: x-small;
   color: gray;
-  padding-bottom: 2em;
+  padding: 4em;
   text-align: center;
 }
 
 .footer a {
   color: rgb(78, 209, 232);
   text-decoration: none;
+}
+
+@media screen and (min-width: 400px) {
+  .headline h1 {
+    font-size: 4em;
+  }
+
+  .headline h2 {
+    font-size: 5em;
+    position: absolute;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -110,22 +122,18 @@ p {
   }
 
   .about,
-  .projects {
-    min-height: 100vh;
-    margin: 0;
-  }
-
+  .projects,
   .contact {
-    min-height: 70vh;
+    min-height: 90vh;
+    margin: 0;
   }
 
   .footer p {
     text-align: right;
+    padding: 2em;
     padding-right: 2em;
   }
-}
 
-@media screen and (min-width: 1400px) {
   .projects {
     margin-bottom: 4em;
   }
