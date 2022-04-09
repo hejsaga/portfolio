@@ -5,6 +5,7 @@ const transformData = (experiences) => {
       title: experience.attributes.title,
       description: experience.attributes.description,
       body: experience.attributes.body,
+      link: experience.attributes.link,
       technologies: experience.attributes.technologies.data.map((tag) => {
         return tag.attributes.title;
       }),

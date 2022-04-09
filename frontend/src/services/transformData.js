@@ -5,6 +5,7 @@ const transformData = (data) => {
       number: project.attributes.number,
       title: project.attributes.title,
       description: project.attributes.description,
+      link: project.attributes.link,
       body: project.attributes.body,
       image: project.attributes.image.data.attributes.url,
       tags: project.attributes.technologies.data.map((tag) => {

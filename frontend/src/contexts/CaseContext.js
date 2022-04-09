@@ -17,6 +17,7 @@ query GetCases {
         title
         description
         body
+        link
         image {
           data {
             attributes {

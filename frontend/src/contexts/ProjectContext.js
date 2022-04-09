@@ -17,6 +17,7 @@ const PROJECTS = gql`
           title
           description
           body
+          link
           number
           image {
             data {

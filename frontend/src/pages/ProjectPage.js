@@ -51,7 +51,16 @@ const ProjectPage = () => {
 
                 <h2>{project[0].title}</h2>
                 <h3>{project[0].description}</h3>
-                <p className={styles.body}>{project[0].body}</p>
+                <p className={styles.body}>
+                  {project[0].body}{" "}
+                  {project[0].link ? (
+                    <a className="projectLink" href={project[0].link}>
+                      here.
+                    </a>
+                  ) : (
+                    ""
+                  )}
+                </p>
 
                 <div className={styles.roles}>
                   {project[0].roles.map((role, i) => {
