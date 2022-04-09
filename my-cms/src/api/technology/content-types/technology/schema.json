@@ -18,7 +18,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::case.case",
-      "inversedBy": "technologies"
+      "mappedBy": "technologies"
     },
     "projects": {
       "type": "relation",
