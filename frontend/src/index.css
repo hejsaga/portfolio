@@ -44,7 +44,7 @@ p {
 }
 
 .pagewrapper {
-  margin-left: 13em;
+  margin-left: 12em;
 }
 
 .pagemargin {
@@ -83,6 +83,10 @@ p {
 .footer a {
   color: rgb(78, 209, 232);
   text-decoration: none;
+}
+
+.projectLink {
+  color: rgb(78, 209, 232);
 }
 
 .loading {

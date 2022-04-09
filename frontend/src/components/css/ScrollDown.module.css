@@ -44,11 +44,11 @@
 }
 
 @media screen and (min-width: 1400px) {
-  .scrollDownText {
+  /* .scrollDownText {
     left: -21px;
   }
 
   .arrow {
     right: unset;
-  }
+  } */
 }
