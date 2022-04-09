@@ -94,6 +94,7 @@ h3 {
   .tags p,
   .roles p {
     font-size: 15px;
+    margin-bottom: 0;
   }
 
   .projectContainer {
